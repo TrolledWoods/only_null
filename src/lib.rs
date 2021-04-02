@@ -9,8 +9,9 @@ use core::ptr::Pointee;
 /// # `OnlyNull`
 ///
 /// A new type of pointer that, intuitively, is only null. You can easily pass this to any function
-/// you want, and it will know that it is always null. This is at least ``1 / 0`` times faster, and
-/// that is a number so special it's incalcuable.
+/// you want, and it will know that it is always null. This means you don't have to check that it's
+/// null. You don't have to do anything in fact, since it can't be anything other than null! This is
+/// at least ``1 / 0`` times faster, and that is a number so special it's incalcuable.
 ///
 /// If you need to convert into a traditional form of pointer, that is trivial since [`OnlyNull`]
 /// implements [`Into`] to these types.
